@@ -1,0 +1,58 @@
+
+/*  default webpage size LARGE */
+body {background-color: blue;}
+.flex-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; /*position flex items in the container*/
+    align-items: stretch;
+}
+div #large {
+    background-color: darkgray;
+    padding:10px;
+    width: 30%;
+}
+div #medium {
+    background-color: gray;
+    padding:10px;
+    width: 30%;
+}
+div #small {
+    background-color: lightgray;
+    padding:10px;
+    width: 30%
+}
+
+#large h1 {font-size: x-large;}
+#large p {font-size: large;}
+
+#medium h1 {font-size: large;}
+#medium p {font-size: medium;}
+
+#small h1 {font-size: small;}
+#small p {font-size: smaller;}
+
+/* screens between 480px and 1024px MEDIUM */
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    .flex-container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    body {background-color: green;}
+    div #large {width: 100%;}
+    div #medium {width: 30%;}
+    div #small {width: 60%}
+}
+/* screens equal or smaller than 480px SMALL*/
+@media screen and (max-width: 480px) {
+    .flex-container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    body {background-color: red;}
+    div #large {width: 100%;}
+    div #medium {width: 100%;}
+    div #small {width: 100%}
+}
